@@ -1,0 +1,21 @@
+
+<div class="card" *ngIf="pokemon" style="width: 8rem;">
+    <img [src]="pokemon.image">
+    <div class="card-body">
+      <div class="card-title">{{pokemon.name}}</div>
+
+      <div >
+          N° {{pokemon.number}}
+      </div>
+      
+      <div href="#" class="pokemon-card__types">
+          <div class="pokemon-card__type"
+            *ngFor="let type of pokemon.types"
+            [class]="'pokemon-card__type--' + type.toLocaleLowerCase"
+          >
+            {{type}}
+          </div>
+      </div>
+    
+    </div>
+  </div>
